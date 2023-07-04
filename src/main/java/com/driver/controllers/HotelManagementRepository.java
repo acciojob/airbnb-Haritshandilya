@@ -54,7 +54,7 @@ public class HotelManagementRepository {
             ans=booking.getNoOfRooms()*currHotel.getPricePerNight();
             bookings.put(uuid,booking);
             List<String> ub = userBookings.getOrDefault(booking.getBookingAadharCard(), new ArrayList<String>());
-            ub.add(uuid);
+            if(! ub.contains(uuid)) ub.add(uuid);
             userBookings.put(booking.getBookingAadharCard(),ub);
         }
         return ans;
