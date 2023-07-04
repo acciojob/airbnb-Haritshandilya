@@ -57,6 +57,8 @@ public class HotelManagementRepository {
             if(! ub.contains(uuid)) ub.add(uuid);
             userBookings.put(booking.getBookingAadharCard(),ub);
         }
+        currHotel.setAvailableRooms(currHotel.getAvailableRooms()-booking.getNoOfRooms());
+        hotels.put(currHotel.getHotelName(),currHotel);
         return ans;
     }
 
