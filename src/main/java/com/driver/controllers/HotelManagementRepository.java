@@ -15,10 +15,10 @@ import java.util.*;
 @Repository
 public class HotelManagementRepository {
 
-    static HashMap<String,Hotel> hotels = new HashMap<String,Hotel>();
-    static HashMap<Integer,User> users = new HashMap<Integer,User>();
-    static HashMap<String,Booking> bookings = new HashMap<String,Booking>();
-    static HashMap<Integer,List<String>> userBookings = new HashMap<Integer, List<String>>();
+     HashMap<String,Hotel> hotels = new HashMap<String,Hotel>();
+     HashMap<Integer,User> users = new HashMap<Integer,User>();
+     HashMap<String,Booking> bookings = new HashMap<String,Booking>();
+     HashMap<Integer,List<String>> userBookings = new HashMap<Integer, List<String>>();
 
     public String addHotel(Hotel hotel) {
         if(hotels.containsKey(hotel.getHotelName())) return "FAILURE";

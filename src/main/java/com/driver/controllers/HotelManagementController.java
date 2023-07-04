@@ -31,12 +31,12 @@ public class HotelManagementController {
         //You need to add an hotel to the database
         if(hotel==null) return "FAILURE";
         if(hotel.getHotelName()==null) return "FAILURE";
-        else return hotel.getHotelName();
+//        else return hotel.getHotelName();
         //incase the hotelName is null or the hotel Object is null return an empty a FAILURE
         //Incase somebody is trying to add the duplicate hotelName return FAILURE
         //in all other cases return SUCCESS after successfully adding the hotel to the hotelDb.
 
-//        return hotelManagementService.addHotel(hotel);
+        return hotelManagementService.addHotel(hotel);
 //        return null;
     }
 
