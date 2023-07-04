@@ -21,9 +21,9 @@ public class HotelManagementRepository {
      HashMap<Integer,List<String>> userBookings = new HashMap<Integer, List<String>>();
 
     public String addHotel(Hotel hotel) {
-//        if(hotels.containsKey(hotel.getHotelName())) {
-//            return "FAILURE";
-//        }
+        if(hotels.containsKey(hotel.getHotelName())) {
+            return "FAILURE";
+        }
         hotels.put(hotel.getHotelName(),hotel);
         return "SUCCESS";
     }
