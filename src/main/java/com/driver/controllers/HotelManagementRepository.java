@@ -37,7 +37,7 @@ public class HotelManagementRepository {
             if(e.getValue().getFacilities().size()>max){
                 ans=e.getKey();
                 max = e.getValue().getFacilities().size();
-            }else if(e.getValue().getFacilities().size()==max && e.getKey().compareTo(ans)>0){
+            }else if(e.getValue().getFacilities().size()==max && max>0 && e.getKey().compareTo(ans)>0){
                 ans=e.getKey();
                 max = e.getValue().getFacilities().size();
             }
