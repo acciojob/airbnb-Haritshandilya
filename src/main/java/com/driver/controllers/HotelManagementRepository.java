@@ -42,6 +42,7 @@ public class HotelManagementRepository {
                 max = e.getValue().getFacilities().size();
             }
         }
+        if(max==0) return null;
         return ans;
     }
 
