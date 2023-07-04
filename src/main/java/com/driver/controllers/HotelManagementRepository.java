@@ -69,7 +69,8 @@ public class HotelManagementRepository {
     }
 
     public int getBookings(Integer aadharCard) {
-        return userBookings.getOrDefault(aadharCard, new ArrayList<String>()).size();
+        return aadharCard;
+//        return userBookings.getOrDefault(aadharCard, new ArrayList<String>()).size();
     }
 
     public Hotel updateFacilities(List<Facility> newFacilities, String hotelName) {
@@ -77,9 +78,9 @@ public class HotelManagementRepository {
         if(currHotel==null) return null;
         if(currHotel.getFacilities()==null) currHotel.setFacilities(new ArrayList<Facility>());
         List<Facility> facilities = currHotel.getFacilities();
-        for(Facility newone: newFacilities){
-            if(!facilities.contains(newone)){
-                facilities.add(newone);
+        for(Facility newOne: newFacilities){
+            if(!facilities.contains(newOne.toString())){
+                facilities.add(newOne);
             }
         }
         currHotel.setFacilities(facilities);
